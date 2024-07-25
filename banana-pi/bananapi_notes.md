@@ -196,6 +196,14 @@ According to the [Banana Pi Wiki][wiki banana-pi]
 > - bl2_emmc.img, 
 > - mtk-bpi-r3-EMMC-WAN1-SFP1-20220619-single-image.img
 
+#### Need to build packages
+```sh
+# loop@ubuntu-zamiast  ~  
+sudo apt install gcc binutils bzip2 flex python3 perl make grep diffutils unzip gawk subversion libz-dev libc-dev rsync libncurses5-dev g++
+git clone https://github.com/BPI-SINOVOIP/BPI-R3-OPENWRT-V21.02.3.git
+```
+
+
 Boot from SD card
 ```sh
 fw_setenv bootcmd "run ubi_init ; env default bootcmd ; saveenv ; reset"
@@ -281,6 +289,7 @@ saveenv
 - [firmware](https://dl.eko.one.pl/firmware/?version=luci-23.05-SNAPSHOT&target=mediatek%2Ffilogic&id=bananapi_bpi-r3)
 - [Rafał Bielawski @YouTube](https://www.youtube.com/watch?v=PmTMmande14)
 - [Accessing LuCI web interface securely](https://openwrt.org/docs/guide-user/luci/luci.secure)
+- [OpenWrt Support for Banana Pi BPI-R3](https://forum.openwrt.org/t/openwrt-support-for-banana-pi-bpi-r3/154294/134?page=3)
 
 [wiki banana-pi]: https://wiki.banana-pi.org/Getting_Started_with_BPI-R3
 [board]: https://pl.aliexpress.com/item/1005004886608696.html?spm=a2g0o.order_list.order_list_main.5.43e91c24iRBFf1&gatewayAdapt=glo2pol
